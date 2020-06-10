@@ -35,9 +35,9 @@
           </ion-select> 
       </ion-item>
       <ion-row>
-        <ion-col text-center><h2>Valor: {{itemSelected.price | currency: 'R$ '}}</h2></ion-col>
+          <ion-col text-center><h2>Valor: {{itemSelected.price | currency: 'R$ '}}</h2></ion-col>
       </ion-row>
-    <ion-button color='warning' shape='round' expand='full' (click)='addToCart()'>
+    <ion-button color='warning' shape='round' expand='full' (click)='addShoppingItem()'>
       <ion-icon name='cart'></ion-icon> Adicionar no Carrinho
     </ion-button>
   </ion-card-content>

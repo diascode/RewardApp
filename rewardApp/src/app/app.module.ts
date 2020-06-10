@@ -10,10 +10,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { environment } from '../environments/environment';
 import {AngularFireAuthModule} from 'angularfire2/auth';
-import { Base64ToGallery } from '@ionic-native/base64-to-gallery/ngx';
+
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
 
 
@@ -32,7 +33,8 @@ import androidx.core.app.ActivityCompat; */
      AppRoutingModule,
      AngularFireAuthModule,
      AngularFirestoreModule,
-     AngularFireModule.initializeApp(environment.firebaseConfig)
+     AngularFireModule.initializeApp(environment.firebaseConfig),
+     AngularFireDatabaseModule
     ],
   providers: [
     StatusBar,
@@ -40,7 +42,7 @@ import androidx.core.app.ActivityCompat; */
     NavParams,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     QRScanner,
-    Base64ToGallery
+    
   ],
   bootstrap: [AppComponent]
 })

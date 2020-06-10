@@ -2,10 +2,11 @@
   <ion-item lines="none">
       <app-logo slot="start"></app-logo>
       <ion-label color="warning"><h1><b>MENU</b></h1></ion-label>
-      <ion-tab-button color="warning" slot="end"tab="cart">
+      <ion-tab-button color="warning" slot="end"tab="checkout">
         <ion-icon  name="cart"></ion-icon>
         <ion-label>carrinho</ion-label>
       </ion-tab-button>
+      
       
   </ion-item>
   
@@ -25,7 +26,7 @@
         </ion-col>
         <ion-col>{{item.price | currency:'BRL':true}}</ion-col>  
       </ion-row>
-      <ion-button shape="round" color="warning" expand="full" [href]="'/home/menu-detail/'+item.id"> Adicionar no carrinho</ion-button>  
+      <ion-button shape="round" color="warning" expand="full" [href]="'/home/menu-detail/'+item.id"> Pedir </ion-button>  
     </ion-card-content>
             
   </ion-card>

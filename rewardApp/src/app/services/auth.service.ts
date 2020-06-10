@@ -101,12 +101,12 @@ export class AuthService {
 
   currentUser() {
 
-    return this.userEmail = this.fireAuth.auth.onAuthStateChanged(user => {
+    return Promise.resolve( this.userEmail = this.fireAuth.auth.onAuthStateChanged(user => {
       if (user) {
         console.log(user.email);
         this.userEmail = user.email.toString;
       }
-    });
+    }))
 
   }
 

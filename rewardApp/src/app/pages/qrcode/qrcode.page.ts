@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Base64ToGallery } from '@ionic-native/base64-to-gallery/ngx';
+//import { Base64ToGallery } from '@ionic-native/base64-to-gallery/ngx';
 import { AlertService } from 'src/app/services/alert.service';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 
@@ -16,7 +16,7 @@ export class QrcodePage implements OnInit {
   elementType: 'url' | 'canvas' | 'img' = 'canvas';
 
   constructor(private qrScanner: QRScanner,
-              private base64ToGallery: Base64ToGallery,
+              //private base64ToGallery: Base64ToGallery,
               private alert: AlertService
   ) { }
 
@@ -50,7 +50,7 @@ export class QrcodePage implements OnInit {
   })
   .catch((e: any) => console.log('Error is', e));
   }
-  downloadQR() {
+   /*downloadQR() {
     const canvas = document.querySelector('canvas') as HTMLCanvasElement;
     const imageData = canvas.toDataURL('image/jpeg').toString();
 
@@ -58,12 +58,12 @@ export class QrcodePage implements OnInit {
 
     // access photo library
 
-    this.base64ToGallery.base64ToGallery(data, {
+   this.qrScanner.base64ToGallery(data, {
       prefix: '_img', mediaScanner: true
     })
       .then(res => {
         this.alert.presentToast('Download', 'QRcode salvo na sua biblioteca de fotos')
       })
       .catch(err => this.alert.presentAlert('Erro', err));
-  }
+  }*/
 }

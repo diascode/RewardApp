@@ -24,7 +24,7 @@ export class HomeguardGuard implements CanActivate {
           resolve(true)
         }else{
           this.alert.presentToast("","Usuário não informado, clique entrar")
-          this.router.navigate([''])
+          this.router.navigate(['home/feed'])
           resolve(false)
         }
       }).catch(err => {

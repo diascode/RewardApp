@@ -26,10 +26,10 @@ const routes: Routes = [
           )
       },
       {
-        path: 'cart',
+        path: 'checkout',
         loadChildren: () =>
-          import('../pages/cart/cart.module').then(
-            m => m.CartPageModule
+          import('../pages/checkout/checkout.module').then(
+            m => m.CheckoutPageModule
           )
       },
       {

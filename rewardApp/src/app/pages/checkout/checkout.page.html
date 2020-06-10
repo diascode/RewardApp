@@ -1,0 +1,25 @@
+
+<ion-content class="checkout">
+  <ion-card>
+    <ion-card *ngFor ="let item of orderList " >
+      
+       <ion-card-content>
+        <ion-row  align-items-start>
+          
+          <ion-col >
+            <ion-card-title>
+                <img height="100px" width="100px" src={{item.img}}/>
+              {{item.name}}
+            </ion-card-title>
+          </ion-col>
+          <ion-col>{{item.option1}}</ion-col>
+          <ion-col>{{item.option2}}</ion-col>
+          <ion-col>{{item.option3}}</ion-col>
+          <ion-col>{{item.price | currency:'BRL':true}}</ion-col>  
+        </ion-row>
+        <ion-button shape="round" color="warning" (click)="removeItem()"><ion-icon name="remove-circle"></ion-icon>Remover do carrinho</ion-button>  
+      </ion-card-content>
+              
+    </ion-card>
+  </ion-card>
+    

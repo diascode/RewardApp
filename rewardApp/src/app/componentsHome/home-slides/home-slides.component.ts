@@ -23,9 +23,8 @@ export class HomeSlidesComponent implements OnInit {
   initializeItems() {
     
     this.items = [
-      'Comida',
-      'Vestuário',
-      'Materiais de Construção',
+      'Promoções da Semana',
+      
     ];
     this.queryItems=this.items;
   }
