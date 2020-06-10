@@ -2,7 +2,7 @@
 <div class="centerHome" > 
   <ion-item lines="none">
       <app-logo slot="start"></app-logo>
-      <ion-tab-button color="warning" slot="end"tab="cart">
+      <ion-tab-button color="warning" slot="end"tab="checkout">
         <ion-icon  name="cart"></ion-icon>
         <ion-label>carrinho</ion-label>
       </ion-tab-button>
@@ -10,10 +10,10 @@
   
   <ion-item lines="none">
       <p slot="start">Ola, Paulo. <p> 
-      <ion-button [routerLink]="[ '/home/menu' ]" color="warning"><ion-icon slot="start" name="fast-food"></ion-icon> <b>MENU </b> </ion-button>
-      <app-points slot="end"></app-points>
+      
+      <!--<app-points slot="end"></app-points>-->
     
-      <p slot="botton">Veja as super ofertas que temos hoje para você </p>
+      <p slot="botton">Veja as super ofertas que temos essa semana para você </p>
   </ion-item>
   
 </div>
